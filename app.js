@@ -16,8 +16,8 @@ config({
 app.use(express.json());  // For getting req.body data
 app.use(cookieParser());
 app.use(cors({
+    origin: ['http://localhost:3000'],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
 app.use("/api/v1/user", userRouter);
-
