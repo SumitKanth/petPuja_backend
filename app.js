@@ -16,7 +16,7 @@ config({
 app.use(express.json());  // For getting req.body data
 app.use(cookieParser());
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://petpuja-backend.onrender.com/api/v1/user'],
+    origin: ['http://localhost:3000', 'https://petpuja-backend.onrender.com'],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
