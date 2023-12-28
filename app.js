@@ -12,12 +12,13 @@ config({
 });
 
 
+app.use("/api/v1/user", userRouter);
+
 // middleware 
 app.use(express.json());  // For getting req.body data
 app.use(cookieParser());
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://petpuja-backend.onrender.com'],
+    origin: ['https://petpuja-backend.onrender.com'],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
-app.use("/api/v1/user", userRouter);
